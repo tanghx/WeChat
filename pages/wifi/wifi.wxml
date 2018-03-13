@@ -1,0 +1,10 @@
+<view class="index" wx:if="{{indexShow}}" bindtap="search">
+  <image src="../../images/icon/wifi_search.gif" class="index-pic"></image>
+  <view class="index-text">搜索附近免费wifi</view>
+</view>
+<view class="wifi-list" wx:if="{{listShow}}">
+  <view class="wifi-item" wx:for="{{wifiInfor}}" data-name="{{item.name}}" data-address="{{item.address}}" data-latitude="{{item.baidu_lat}}" data-longitude="{{item.baidu_lon}}" bindtap="position">
+    <view class="wifi-name">{{item.name}}</view>
+    <view class="wifi-address">{{item.address}}</view>
+  </view>
+</view>

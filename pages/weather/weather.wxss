@@ -1,0 +1,281 @@
+/**index.wxss**/
+page{
+  padding-top: 40rpx;
+  box-sizing: border-box;
+  background: url(../../images/bg.jpg);
+  background-size: 100%;
+  position: relative;
+  color:#fff;
+  font-family: "微软雅黑";
+  padding-bottom: 20rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.search{
+  width: 700rpx;
+  display: flex;
+  flex-direction:row;
+  margin: 0 auto; 
+  border: 1px solid #dedede;
+  border-radius: 10rpx;
+}
+.search-type{
+  width:130rpx;
+  height: 60rpx;
+  background: #fff;
+  border: none;
+  border-right: 1px solid #dedede;
+  border-radius: 10rpx 0 0 10rpx;
+  margin: 0;
+  font-size: 12px;
+  line-height: 60rpx;
+  font-family: "微软雅黑";
+  color:#666;
+}
+.search-type::after{
+  display: none
+}
+.search-inp{
+  width: 500rpx;
+  height: 60rpx;
+  border: none;
+  min-height: 0;
+  border-right: 1px solid #dedede;
+  font-size: 12px;
+  text-indent: 10px;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  background: #fff;
+  color: #666;
+}
+.search-btn{
+  width: 70rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  padding-top:10rpx;
+  box-sizing:border-box;
+  background: #fff;
+  border-radius: 0 10rpx 10rpx 0;
+}
+.area{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin: 30rpx 0;
+}
+.today-weather-infor{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.today-weather-infor-pic{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-top: -8rpx;
+  margin-left: -13rpx;
+}
+.today-temp{
+  text-align: center;
+  font-size: 80px;
+}
+.today-air{
+  height: 30rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30rpx;
+}
+.today-wind{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15rpx; 
+}
+
+.hour-weather{
+  width: 700rpx;
+  height: 180rpx;
+  overflow-x: auto;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.hour-weather-box0{
+  width: 2398rpx;
+  overflow: hidden;
+}
+.hour-weather-box{
+  width: 2400rpx;
+  overflow: hidden;
+}
+.hour-item{
+  float: left;
+  width: 100rpx;
+  height: 180rpx;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.hour-item::last-child{
+  border: none;
+}
+.hour-item-time{
+  text-align: center
+}
+.hour-item-img{
+  width: 50rpx;
+  height: 50rpx;
+}
+.day-weather{
+  width: 700rpx;
+  border: 1px solid #fff;
+  border-bottom: none;
+  box-sizing: border-box;
+  margin: 20rpx auto;
+  font-size: 12px;
+}
+.day-item-week{
+  margin-right: 100rpx;
+  margin-left: 20rpx;
+}
+.day-weather-item{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.day-item-img{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-top: -5rpx;
+}
+.day-item-temp{
+  float: right;
+  width: 110rpx;
+  text-align: right;
+}
+.day-item-wind{
+  float: right;
+  margin-right: 100rpx;
+}
+
+
+.life{
+  width: 700rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.life-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.life_box{
+  float: left;
+  width: 215rpx;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #f2ffff;
+  font-size: 12px;
+  padding-top: 15rpx;
+  color: #999;
+  font-family: "微软雅黑";
+}
+
+.life_pic{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.lift_suggest{
+  padding-top: 15rpx;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  font-family: "微软黑体";
+}
+
+.city_list{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  font-size: 12px;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding-top: 70rpx;
+  font-family: "微软雅黑";
+}
+.city_box{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+.province_box{
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 15rpx;
+  overflow: hidden;
+}
+.province{
+  font-size: 14px;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+.city_item{
+  float: left;
+  padding: 10rpx 20rpx;
+  margin: 10rpx 5rpx;
+  background: #f8f8f8;
+  border-radius: 10rpx;
+  color: #666;
+}
+.city_list_header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70rpx;
+  background: #f1f1f1;
+  border-bottom: 1px solid #dedede;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+.back{
+  float: left;
+  width: 100rpx;
+  height: 50rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  color: #666
+}
+.location{
+  float: right;
+  width: 100rpx;
+  height: 50rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  color: #666
+}

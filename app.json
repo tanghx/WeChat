@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/weather/weather",
+    "pages/wifi/wifi"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#ccc"
+  },
+   "tabBar": {
+    "backgroundColor":"#f6f5f1",
+    "borderStyle":"white",
+    "selectedColor":"#39d939",
+    "list": [{
+      "pagePath": "pages/weather/weather",
+      "text": "天气",
+      "iconPath":"images/icon/brightness_64.png",
+      "selectedIconPath":"images/icon/brightness_green.png"
+    }, {
+      "pagePath": "pages/wifi/wifi",
+      "text": "WiFi",
+      "iconPath":"images/icon/wifi_64.png",
+      "selectedIconPath":"images/icon/wifi_green.png"
+    }]
+  }
+}

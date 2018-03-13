@@ -1,0 +1,105 @@
+<!--index.wxml-->
+
+<view class="search flex-wrp">
+    <button class="flex-item search-type" bindtap="selectCity">城市</button>
+    <input class="flex-item search-inp" value="{{input_val}}" bindinput="searchInp"/>
+    <icon class="flex-item search-btn" type="search" bindtap="search" size="22"></icon>
+</view>
+<view class="area">
+  <text>{{weather.city}}</text>
+</view>
+<view class="today-weather">
+  <view class="today-weather-infor">
+    <image src="../../images/weather/{{weather.img}}.png" class="today-weather-infor-pic"></image>
+    {{weather.weather}}
+  </view>
+  <view class="today-temp">{{weather.temp}}°</view>
+  <view class="today-air">{{weather.aqi.aqi}} {{weather.aqi.quality}}</view>
+  <view class="today-wind">
+    <text>{{weather.winddirect}} {{weather.windpower}}</text>
+  </view>
+</view>
+<view class="hour-weather">
+  <view class="hour-weather-box0">
+    <view class="hour-weather-box">
+      <view wx:for="{{weather.hourly}}" class="hour-item">
+        <view class="hour-item-time">{{item.time}}</view>
+        <view><image src="../../images/weather/{{item.img}}.png" class="hour-item-img"></image></view>
+        <view class="hour-item-weather">{{item.weather}}</view>
+        <view class="hour-item-time">{{item.temp}}°</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="day-weather">
+  <view class="day-weather-item" wx:for="{{weather.daily}}">
+    <text class="day-item-week">{{item.week}}</text>
+    <image src="../../images/weather/{{item.day.img}}.png" class="day-item-img"></image>
+    <text> {{item.day.weather}}</text>
+    <text class="day-item-temp">{{item.night.templow}}°-{{item.day.temphigh}}°</text>
+    <text class="day-item-wind">{{item.day.windpower}}</text>
+  </view>
+</view>
+
+<view class="life">
+  <view class="life-row" style="margin-bottom: 10rpx">
+    <view class="clothes life_box" data-infor="{{weather.index[6].detail}}" data-name="{{weather.index[6].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/clothes.png" class="life_pic"></image>
+        穿衣
+      </view>
+      <view class="lift_suggest">{{weather.index[6].ivalue}}</view>
+    </view>
+    <view class="cold life_box" data-infor="{{weather.index[3].detail}}" data-name="{{weather.index[3].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/cold.png" class="life_pic"></image>
+        感冒
+      </view>
+      <view class="lift_suggest">{{weather.index[3].ivalue}}</view>
+    </view>
+    <view class="sport life_box" data-infor="{{weather.index[1].detail}}" data-name="{{weather.index[1].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/sport.png" class="life_pic"></image>
+        运动
+      </view>
+      <view class="lift_suggest">{{weather.index[1].ivalue}}</view>
+    </view>
+  </view>
+  <view class="life-row">
+    <view class="travel life_box" data-infor="{{weather.index[5].detail}}" data-name="{{weather.index[5].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/travel.png" class="life_pic"></image>
+        污染扩散
+      </view>
+      <view class="lift_suggest">{{weather.index[5].index}}</view>
+    </view>
+    <view class="car life_box" data-infor="{{weather.index[4].detail}}" data-name="{{weather.index[4].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/car.png" class="life_pic"></image>
+        洗车
+      </view>
+      <view class="lift_suggest">{{weather.index[4].ivalue}}</view>
+    </view>
+    <view class="light life_box" data-infor="{{weather.index[2].detail}}" data-name="{{weather.index[2].iname}}" bindtap="life">
+      <view>
+        <image src="../../images/icon/light.png" class="life_pic"></image>
+        紫外线
+      </view>
+      <view class="lift_suggest">{{weather.index[2].ivalue}}</view>
+    </view>
+  </view>
+</view>
+<view class="city_list" wx:if="{{city_list_show}}">
+  <view class="city_list_header">
+    <view class="back" bindtap="back">返回</view>
+    <view class="location" bindtap="position">定位</view>
+  </view>
+  <view class="city_box">
+    <view wx:for="{{city_list}}" class="province_box">
+      <view class="province">{{item.p}}</view>
+      <view>
+        <view wx:for="{{item.c}}" data-name="{{item}}" class="city_item" bindtap="select">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
