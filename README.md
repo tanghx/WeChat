@@ -1,3 +1,2 @@
 # WeChat
-WeChat
-欢迎
+小程序开发测试
